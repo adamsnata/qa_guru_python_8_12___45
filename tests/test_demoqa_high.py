@@ -1,8 +1,10 @@
 import allure
 from selene import browser, have
+
+from qa_guru import resources
 #
-from users.users import User
-from users_data.user1_data import Vitalii_Sharov
+from qa_guru.users.users import User
+from qa_guru.users_data.user1_data import Vitalii_Sharov
 
 
 def test_submit_student_registration_form_by_high_steps():

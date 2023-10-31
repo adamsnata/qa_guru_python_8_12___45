@@ -1,6 +1,6 @@
 import datetime
 
-from users.users import User
+from qa_guru.users.users import User
 
 Vitalii_Sharov = User(
     first_name='Vitalii',
