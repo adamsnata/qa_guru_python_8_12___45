@@ -1,10 +1,12 @@
 import pytest
 
 
-from selene import browser, Browser, Config
-from selene.support import webdriver
-from selenium.webdriver.chrome.options import Options
 
+
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selene import Browser, Config
 from qa_guru.utils import attach
 
 
