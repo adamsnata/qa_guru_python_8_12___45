@@ -1,6 +1,6 @@
 import allure
 
-from page.registration_page import RegistrationPage
+from tests.registration_page import RegistrationPage
 from users_data.user1_data import Vitalii_Sharov
 
 
