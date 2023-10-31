@@ -23,6 +23,9 @@ def test_submit_student_registration_form_by_high_steps():
 class RegistrationPage:
     def open_form(self):
         browser.open('/automation-practice-form')
+        browser.execute_script('document.querySelector("#fixedban").remove()')
+        browser.element('footer').execute_script('element.remove()')
+
         return self
 
     def submit_form(self, user: User):
