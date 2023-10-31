@@ -1,7 +1,7 @@
 import pytest
 from appium.webdriver import webdriver
 
-from selene import browser
+from selene import browser, Browser, Config
 from selenium.webdriver.chrome.options import Options
 
 from qa_guru.utils import attach
@@ -9,10 +9,11 @@ from qa_guru.utils import attach
 
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
+    browser_version = "100.0"
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
-        "browserVersion": "100.0",
+        "browserVersion": browser_version,
         "selenoid:options": {
             "enableVNC": True,
             "enableVideo": True
@@ -24,7 +25,7 @@ def setup_browser(request):
         options=options
     )
 
-    browser.config.driver = driver
+    browser = Browser(Config(driver))
     browser.config.base_url = "https://demoqa.com"
     yield browser
 
